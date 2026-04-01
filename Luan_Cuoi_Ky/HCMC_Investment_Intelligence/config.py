@@ -11,7 +11,7 @@ INDICATORS = {
     'Services': 'NV.SRV.TOTL.ZS',         # Dịch vụ & Thương mại
     'Trade': 'NE.TRD.GNFS.ZS',            # Mức độ mở cửa kinh tế
     'Energy': 'EG.ELC.ACCS.ZS',           # Hạ tầng năng lượng
-    'Logistics_Cost': 'IS.SHP.GDSW.ZS',   # Chỉ số vận tải/Logistics
+    'Logistics': 'NV.SRV.TNSV.ZS',  # Chỉ số vận tải/Logistics
     'Education': 'SE.XPD.TOTL.GD.ZS',     # Đầu tư nhân lực (Giáo dục)
     'Healthcare': 'SH.XPD.CHEX.GD.ZS'     # Y tế & An sinh
 }
