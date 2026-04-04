@@ -40,9 +40,23 @@ const NavigationBar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
-        <a href="https://quachthanhlong.com" target="_blank" rel="noopener noreferrer" className="text-xs font-mono font-semibold text-emerald tracking-wider hover:text-foreground transition-colors">
-          quachthanhlong.com
-        </a>
+        {/* --- PHẦN LOGO TỪ FILE PUBLIC/LOGO.PNG --- */}
+<a 
+  href="https://quachthanhlong.com" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="flex items-center gap-3 group transition-all"
+>
+  {/* Hiển thị file logo.png của ông */}
+  <img 
+    src="/logo.png" 
+    alt="Brand Logo" 
+    className="h-12 w-auto object-contain opacity-100 group-hover:scale-105 transition-transform duration-200"  
+  />
+  
+  {/* Text thương hiệu đi kèm (tùy chọn, có thể xóa nếu logo đã có chữ) */}
+</a>
+        
         <div className="hidden md:flex items-center gap-1">
           {navKeys.map((link) => (
             <a
