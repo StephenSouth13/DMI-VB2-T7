@@ -2,22 +2,64 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#0B0E14" />
+    
     <title>HCMC Investment Intelligence 2026 | Strategic Dashboard</title>
-    <meta name="description" content="HCMC Strategic Investment Prospectus 2026 - Data-driven intelligence for Vietnam's next growth era. Sector analysis, CAGR forecasts, and optimal capital allocation." />
+    <meta name="title" content="HCMC Investment Intelligence 2026 | Strategic Dashboard" />
+    <meta name="description" content="Nền tảng phân tích thực chứng đầu tư TP.HCM. CAGR High-Tech 11.59%, R2 0.92. Dự báo FDI 2025 đạt 8.37 tỷ USD. Giải pháp Data-driven bởi quachthanhlong.com." />
     <meta name="author" content="quachthanhlong.com" />
 
-    <meta property="og:title" content="HCMC Investment Intelligence 2026" />
-    <meta property="og:description" content="Data-driven strategic investment dashboard for Ho Chi Minh City — powered by World Bank data & OLS regression." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dmi-vb-2-t7.vercel.app/" />
+    <meta property="og:title" content="HCMC Investment Intelligence 2026 | DMI-VB2-T7" />
+    <meta property="og:description" content="Chiến lược đầu tư dựa trên dữ liệu (Data-driven). Phân tích động lực tăng trưởng dựa trên mô hình OLS trễ và dữ liệu thực tế." />
+    <meta property="og:image" content="https://dmi-vb-2-t7.vercel.app/og-image.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://quachthanhlong.com" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dmi-vb-2-t7.vercel.app/" />
+    <meta property="twitter:title" content="HCMC Investment Intelligence 2026" />
+    <meta property="twitter:description" content="Tầm nhìn đầu tư 2026: Phân tích đa chiều về CAGR, R2 và hiệu quả ROI thực tế tại TP.HCM." />
+    <meta property="twitter:image" content="https://dmi-vb-2-t7.vercel.app/og-image.png" />
+
+    <link rel="canonical" href="https://dmi-vb-2-t7.vercel.app/" />
+
+    <style>
+      body { background-color: #0B0E14; margin: 0; overflow: hidden; }
+      #splash-screen {
+        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        background: #0B0E14; z-index: 9999; transition: opacity 0.5s ease;
+      }
+      .loader {
+        width: 48px; height: 48px; border: 3px solid #10B981; border-bottom-color: transparent;
+        border-radius: 50%; display: inline-block; box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      .loading-text {
+        margin-top: 20px; color: #10B981; font-family: sans-serif;
+        font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold;
+      }
+      @keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .fade-out { opacity: 0; pointer-events: none; }
+    </style>
   </head>
 
   <body>
+    <div id="splash-screen">
+      <span class="loader"></span>
+      <div class="loading-text">HCMC INTELLIGENCE SYSTEM V3.0</div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      window.addEventListener('load', () => {
+        const splash = document.getElementById('splash-screen');
+        setTimeout(() => splash.classList.add('fade-out'), 500);
+      });
+    </script>
   </body>
 </html>
