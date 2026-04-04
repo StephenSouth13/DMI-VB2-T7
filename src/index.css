@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 210 40% 95%;
+
+    --card: 220 15% 8%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 15% 8%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 220 20% 4%;
+
+    --secondary: 210 100% 55%;
+    --secondary-foreground: 220 20% 4%;
+
+    --muted: 220 15% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 220 20% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 16%;
+    --input: 220 15% 16%;
+    --ring: 160 84% 39%;
+
+    --radius: 0.75rem;
+
+    --emerald: 160 84% 39%;
+    --emerald-glow: 160 84% 50%;
+    --electric-blue: 210 100% 55%;
+    --electric-blue-glow: 210 100% 65%;
+    --surface-glass: 220 15% 10%;
+
+    --sidebar-background: 220 15% 6%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 160 84% 39%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 15% 14%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 220 15% 16%;
+    --sidebar-ring: 160 84% 39%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: hsl(160 84% 39% / 0.3);
+  }
+
+  .gradient-text-emerald {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--emerald)), hsl(var(--emerald-glow)));
+  }
+
+  .gradient-text-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--electric-blue-glow)));
+  }
+
+  .gradient-text-mixed {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--emerald)), hsl(var(--electric-blue)));
+  }
+
+  .glow-emerald {
+    box-shadow: 0 0 30px hsl(160 84% 39% / 0.2), 0 0 60px hsl(160 84% 39% / 0.1);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 30px hsl(210 100% 55% / 0.2), 0 0 60px hsl(210 100% 55% / 0.1);
+  }
+
+  .badge-buy {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-lg tracking-wider;
+    background: linear-gradient(135deg, hsl(160 84% 39% / 0.2), hsl(160 84% 50% / 0.1));
+    border: 1px solid hsl(160 84% 39% / 0.5);
+    color: hsl(160 84% 50%);
+    text-shadow: 0 0 20px hsl(160 84% 39% / 0.5);
+  }
+
+  .btn-download {
+    @apply inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--emerald)), hsl(var(--electric-blue)));
+    color: hsl(220 20% 4%);
+  }
+
+  .btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px hsl(160 84% 39% / 0.3);
+  }
+
+  .swot-strength {
+    border-left: 3px solid hsl(160 84% 39%);
+    background: linear-gradient(135deg, hsl(160 84% 39% / 0.08), transparent);
+  }
+
+  .swot-weakness {
+    border-left: 3px solid hsl(0 84% 60%);
+    background: linear-gradient(135deg, hsl(0 84% 60% / 0.08), transparent);
+  }
+
+  .swot-opportunity {
+    border-left: 3px solid hsl(210 100% 55%);
+    background: linear-gradient(135deg, hsl(210 100% 55% / 0.08), transparent);
+  }
+
+  .swot-threat {
+    border-left: 3px solid hsl(45 100% 50%);
+    background: linear-gradient(135deg, hsl(45 100% 50% / 0.08), transparent);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220 15% 6%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 15% 20%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(160 84% 39% / 0.5);
+}
