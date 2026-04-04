@@ -1,3 +1,18 @@
-# Welcome to your Lovable project
-
-TODO: Document your project here
+🚀 HCMC Investment Intelligence 2026Strategic Dashboard: Data-driven Intelligence for the Next Growth EraHCMC Strategic Investment Prospectus 2026 — Một hệ thống phân tích thực chứng (Empirical Analysis) nhằm định vị các cơ hội đầu tư chiến lược tại TP. Hồ Chí Minh dựa trên dữ liệu vĩ mô và mô hình toán kinh tế.🌐 Trình chiếu trực tuyếnLive Dashboard: https://dmi-vb-2-t7.vercel.app/Tác giả: quachthanhlong.comĐơn vị: UEH University - DMI-VB2-T7📊 Tổng quan dự án (Core Insights)Dự án sử dụng phương pháp Place Marketing dựa trên dữ liệu để giải mã sự dịch chuyển cơ cấu kinh tế của TP.HCM từ sản xuất truyền thống sang Nền kinh tế dựa trên tri thức (Knowledge-based Economy).Các con số "biết nói" (Key Statistics):Vị thế: Đóng góp 20–25% GDP cả nước.Quy mô: GRDP 2024 đạt 1.78 triệu tỷ VND.Dòng vốn FDI: Bùng nổ từ $2.2B (2024) lên mức dự báo $8.37B (2025).Ngành mũi nhọn: HCM_HighTech đạt mức tăng trưởng kép CAGR 11.59%.Độ tin cậy: Hệ số xác định $R^2 = 0.92$ (Chứng thực 92% tăng trưởng công nghệ đến từ FDI).🛠️ Tính năng cốt lõi (Key Features)Opportunity Matrix: Trình chiếu trực quan mối quan hệ giữa CAGR và Confidence ($R^2$).Sector Ranking: Xếp hạng 8 ngành kinh tế dựa trên công thức điểm đầu tư độc quyền.Economic Structural Shift: Biểu đồ diện tích (Stacked Area) mô tả hành trình dịch chuyển 2016–2024.Optimal Capital Allocation: Khuyến nghị phân bổ vốn tối ưu cho các nhà đầu tư tổ chức.Strategic SWOT: Khung phân tích rủi ro và cơ hội (Credit tightening, Semiconductor wave, v.v.).PPTX Viewer: Tích hợp bản trình chiếu Full Screen trực tiếp trên Dashboard.🧪 Phương pháp luận (Methodology)Hệ thống được xây dựng trên nền tảng toán học nghiêm ngặt:Tăng trưởng kép (CAGR):$$CAGR = \left( \frac{V_{end}}{V_{begin}} \right)^{\frac{1}{n}} - 1$$Mô hình Hồi quy (Lagged-OLS): Xác định tính nhân quả giữa vốn FDI và sản lượng ngành.$$R^2 = 1 - \frac{SS_{res}}{SS_{tot}}$$Investment Score:$$Score = 40\% \text{Growth} + 40\% \text{Confidence} + 20\% \text{Stability}$$💻 Tech Stack & Cấu trúc mã nguồnFrontend (Vite + React)UI/UX: Tailwind CSS, Lucide Icons, Shadcn UI.Charts: Recharts / Framer Motion cho hiệu ứng mượt mà.i18n: Hỗ trợ đa ngôn ngữ (VI/EN).Data Engine (Python)engine.py: Xử lý ETL từ World Bank API và Local Proxies.analytics.py: Chạy mô hình OLS và tính toán Score.visuals.py: Tự động xuất biểu đồ phân tích.🏗️ Cài đặt và Chạy thử (Local Setup)Clone Repo:Bashgit clone https://github.com/thanhlong-ueh/hcmc-intelligence-2026.git
+cd hcmc-intelligence-2026
+Cài đặt Dependencies:Bashpnpm install
+# Hoặc bổ sung package thiếu nếu có lỗi build
+pnpm add @tanstack/query-core
+Chạy dự án:Bashpnpm run dev
+Build Production:Bashpnpm run build
+📂 Thư mục dự án (Project Structure)Plaintext├── public/                 # Chứa logo.png, og-image.png, PDF reports...
+├── src/
+│   ├── components/
+│   │   └── dashboard/      # NavigationBar, PPTXViewer, Charts...
+│   ├── pages/
+│   │   └── Index.tsx       # Master Page điều khiển toàn bộ Dashboard
+│   ├── i18n/               # Cấu hình đa ngôn ngữ
+│   └── App.tsx             # Cấu hình Router
+├── python_engine/          # Mã nguồn xử lý toán kinh tế (Dữ liệu gốc)
+└── index.html              # Entry point với Metadata SEO & Splash Screen
+📄 Bản quyền & Trích dẫnDự án được thực hiện bởi Quách Thành Long trong khuôn khổ chương trình đào tạo tại UEH University.Website: quachthanhlong.comEmail: [contact@quachthanhlong.com]Disclaimer: Dữ liệu mang tính chất thực chứng tại thời điểm báo cáo (01/04/2026) và chỉ phục vụ mục đích phân tích chiến lược."Data is the new oil, but Intelligence is the refinery." — HCMC Intelligence System V3.0 PRO
